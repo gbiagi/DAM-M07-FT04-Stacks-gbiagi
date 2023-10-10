@@ -53,6 +53,12 @@ class WidgetSidebarsState extends State<WidgetSidebars> {
           width: width,
           child: widget.left,
         ),
+        // Right Sidebar
+        Container(
+          color: Color.fromRGBO(234, 228, 226, 1),
+          width: width,
+          child: widget.right,
+        ),
         // Contingut Principal (central)
         AnimatedPositioned(
           duration: const Duration(milliseconds: millis),
@@ -74,12 +80,6 @@ class WidgetSidebarsState extends State<WidgetSidebars> {
             ),
             child: widget.central,
           ),
-        ),
-        // Right Sidebar
-        Container(
-          color: Color.fromRGBO(234, 228, 226, 1),
-          width: width,
-          child: widget.right,
         ),
       ],
     );

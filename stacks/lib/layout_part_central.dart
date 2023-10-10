@@ -34,9 +34,27 @@ class LayoutPartCentralState extends State<LayoutPartCentral> {
             ],
           ),
           middle: Text("hola"),
+          trailing: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CupertinoButton(
+                padding: const EdgeInsets.all(0.0),
+                onPressed: appData.toggleSidebarRight,
+                child: Icon(
+                  CupertinoIcons.sidebar_right,
+                  color: appData.isSidebarRightVisible
+                      ? CupertinoColors.activeBlue
+                      : CupertinoColors.black,
+                  size: 24.0,
+                  semanticLabel: 'Text to announce in accessibility modes',
+                ),
+              ),
+              const SizedBox(width: 16),
+            ],
+          ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.only(top: 50.0),
+        child: const Padding(
+          padding: EdgeInsets.only(top: 50.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [Text("Central")],
