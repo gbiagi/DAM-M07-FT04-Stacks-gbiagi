@@ -4,7 +4,6 @@ import 'layout_desktop.dart';
 // Main application widget
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
-
   @override
   AppState createState() => AppState();
 }
@@ -14,11 +13,11 @@ class AppState extends State<App> {
 // Definir el contingut del widget 'App'
   @override
   Widget build(BuildContext context) {
-    return CupertinoApp(
+    return const CupertinoApp(
       debugShowCheckedModeBanner: false,
       theme: CupertinoThemeData(brightness: Brightness.light),
-      home: const LayoutDesktop(
-        title: 'App',
+      home: LayoutDesktop(
+        title: 'AppFlItter',
       ),
     );
   }

@@ -3,6 +3,19 @@ import 'package:flutter/material.dart';
 /*
   Exemple de com usar 'WidgetPopover'
 
+  Primer cal crear una key amb les variables de la classe '...state'
+
+  GlobalKey _settingsButtonKey = GlobalKey();
+
+  Cal posar aquesta key al botó que obrirà el Popover:
+
+  IconButton( 
+    key: _settingsButtonKey, 
+    icon: Icon(Icons.settings), 
+    onPressed: () { ...
+
+  Després es pot fer servir el widget:
+
   CupertinoButton(
     key: _settingsButtonKey,
     padding: const EdgeInsets.all(0.0),
@@ -40,6 +53,8 @@ import 'package:flutter/material.dart';
     ),
   )
 */
+
+GlobalKey _settingsButtonKey = GlobalKey();
 
 class WidgetPopover extends StatefulWidget {
   final Offset anchor;
@@ -105,7 +120,6 @@ class WidgetPopoverState extends State<WidgetPopover> {
         final RenderBox childRenderBox =
             childKey.currentContext!.findRenderObject() as RenderBox;
         final childSize = childRenderBox.size;
-
         setState(() {
           width = childSize.width;
           height = childSize.height;
