@@ -21,9 +21,9 @@ class WidgetSidebars extends StatefulWidget {
     Key? key,
     required this.isSidebarLeftVisible,
     this.left,
-    this.right,
     required this.central,
     required this.isSidebarRightVisible,
+    this.right,
   }) : super(key: key);
 
   @override
@@ -47,18 +47,21 @@ class WidgetSidebarsState extends State<WidgetSidebars> {
     }
     return Stack(
       children: [
-        // Left Sidebar
-        Container(
-          color: Color.fromRGBO(234, 228, 226, 1),
-          width: width,
-          child: widget.left,
-        ),
         // Right Sidebar
         Container(
+          alignment: const Alignment(1, -1),
           color: Color.fromRGBO(234, 228, 226, 1),
           width: width,
           child: widget.right,
         ),
+        // Left Sidebar
+        Container(
+          alignment: const Alignment(-1, -1),
+          color: Color.fromRGBO(234, 228, 226, 1),
+          width: width,
+          child: widget.left,
+        ),
+
         // Contingut Principal (central)
         AnimatedPositioned(
           duration: const Duration(milliseconds: millis),
@@ -71,7 +74,7 @@ class WidgetSidebarsState extends State<WidgetSidebars> {
               color: Colors.white,
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.3),
+                  color: const Color.fromARGB(255, 0, 0, 0).withOpacity(0.3),
                   spreadRadius: 0,
                   blurRadius: 2,
                   offset: Offset(0, 2),

@@ -17,8 +17,8 @@ class LayoutPartLeftState extends State<LayoutPartLeft> {
       width: double.infinity, // Expandeix l'ample
       height: double.infinity, // Expandeix l'alt
       child: const Column(
-        crossAxisAlignment:
-            CrossAxisAlignment.start, // Alinea els elements a l'esquerra
+        crossAxisAlignment: CrossAxisAlignment
+            .start, // Alinea els elements a l'esquerra (el text)
         children: [Text("Left")],
       ),
     );

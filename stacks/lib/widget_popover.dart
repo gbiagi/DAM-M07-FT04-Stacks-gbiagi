@@ -54,7 +54,7 @@ import 'package:flutter/material.dart';
   )
 */
 
-GlobalKey _settingsButtonKey = GlobalKey();
+//GlobalKey _settingsButtonKey = GlobalKey();
 
 class WidgetPopover extends StatefulWidget {
   final Offset anchor;
