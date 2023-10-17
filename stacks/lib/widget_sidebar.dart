@@ -48,12 +48,14 @@ class WidgetSidebarsState extends State<WidgetSidebars> {
     return Stack(
       children: [
         // Right Sidebar
-        Container(
-          alignment: const Alignment(1, -1),
-          color: Color.fromRGBO(234, 228, 226, 1),
-          width: width,
-          child: widget.right,
-        ),
+        Align(
+            alignment: Alignment.topRight,
+            child: Container(
+              alignment: const Alignment(1, -1),
+              color: Color.fromRGBO(234, 228, 226, 1),
+              width: width,
+              child: widget.right,
+            )),
         // Left Sidebar
         Container(
           alignment: const Alignment(-1, -1),
